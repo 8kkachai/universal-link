@@ -194,12 +194,12 @@
         }
 
         function getValidUrl() {
-            var urlRedirect = "[(${url})]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             return urlRedirect;
         }
 
         function doEvtBeforeRedirect() {
-            var urlRedirect = "[[${url}]]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             document.getElementById("spinner").style.display = "none";
         }
 
