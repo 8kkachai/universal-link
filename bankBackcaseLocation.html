@@ -189,19 +189,19 @@
             var opener = null;
             var redirectUrl = getValidUrl();
 
-			if (navigator.userAgent.match(/Android/i)) 
-				document.location=redirectUrl;      
-			else
-				window.location.replace(redirectUrl);
+	    if (navigator.userAgent.match(/Android/i)) 
+		document.location=redirectUrl;      
+	    else
+		window.location.replace(redirectUrl);
         }
 
         function getValidUrl() {
-            var urlRedirect = "[(${url})]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             return urlRedirect;
         }
 
         function doEvtBeforeRedirect() {
-            var urlRedirect = "[[${url}]]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             document.getElementById("spinner").style.display = "none";
         }
 
