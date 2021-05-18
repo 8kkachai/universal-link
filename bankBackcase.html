@@ -186,24 +186,16 @@
 <script inline="javascript">
 
         function gotoApp() {
-            var opener = null;
-            var redirectUrl = getValidUrl();
-            setTimeout(function() {
-                if (opener != null) {
-                    opener.close();
-                }
-            }, 5000);
-
-            opener = window.open(redirectUrl, "_blank");
+            window.location.replace( getValidUrl() );
         }
 
         function getValidUrl() {
-            var urlRedirect = "[(${url})]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             return urlRedirect;
         }
 
         function doEvtBeforeRedirect() {
-            var urlRedirect = "[[${url}]]";
+            var urlRedirect = "myais://ResumePayment?url=https%3A%2F%2Fwww.google.com";
             document.getElementById("spinner").style.display = "none";
         }
 
